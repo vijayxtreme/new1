@@ -1,9 +1,16 @@
+body {
+  -webkit-font-smoothing: antialiased;
+}
 @font-face {
   font-family: 'Knockout';
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/Knockout-27JuniorBantamWeight.otf");
   src: url("../fonts/Knockout-27JuniorBantamwt.eot?#iefix") format('embedded-opentype'), url("../fonts/Knockout-27JuniorBantamwt.woff") format('woff'), url("../fonts/Knockout-27JuniorBantamwt.ttf") format('truetype');
+}
+@font-face {
+  font-family: "Helvetica Neue Ltd";
+  src: url("../fonts/HelveticaNeue-Light.otf");
 }
 .futura,
 section.content .main-image .main-title p,
@@ -14,9 +21,14 @@ section.recent-reviews .recent-main .cat-heading,
 section.recent-blog-posts h2,
 section.stay-in-touch span,
 section.social-media h3,
-.last-col section.recent-blog-posts h2,
-.last-col section.stay-in-touch span,
-.last-col section.social-media h3 {
+.container section.content .main-image .main-title p,
+.container section.trending-posts h2,
+.container section.trending-posts article p.category,
+.container section.recent-reviews h2,
+.container section.recent-reviews .recent-main .cat-heading,
+.container .last-col section.recent-blog-posts h2,
+.container .last-col section.stay-in-touch span,
+.container .last-col section.social-media h3 {
   font-family: 'Futura';
   letter-spacing: 2.5px;
 }
@@ -145,6 +157,59 @@ table {
 }
 .desktop-nav {
   display: none;
+}
+.mobile {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  aside {
+    float: left;
+    height: 3268px;
+    width: 159px;
+    background-color: #77adb7;
+    display: none;
+    position: relative;
+    font-family: "Open Sans";
+    padding-right: 26px;
+    padding-left: 26px;
+    color: #fff;
+  }
+  aside ul li {
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+  }
+  aside .close-btn {
+    text-align: right;
+    padding-top: 24px;
+  }
+  aside .social-icons {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+  aside .social-icons ul li {
+    display: inline;
+  }
+  aside .aside-menu h4 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  aside .aside-menu #home-heading {
+    padding-bottom: 18px;
+  }
+  aside .aside-menu #dating-heading {
+    padding-top: 61px;
+    padding-bottom: 25px;
+  }
+  aside .aside-menu #automation-heading {
+    padding-top: 61px;
+    padding-bottom: 25px;
+  }
+  aside .aside-menu #subboxes-heading {
+    padding-top: 51px;
+    padding-bottom: 25px;
+  }
 }
 @media screen and (max-width: 599px) {
   header {
@@ -299,6 +364,12 @@ table {
   section.content .main-image .main-title h1 {
     font-size: 40px;
     line-height: 35px;
+  }
+  section.content .main-image .main-title .desktop {
+    display: none;
+  }
+  section.content .main-image .main-title .mobile {
+    display: block;
   }
   section.content .main-image .main-title a {
     text-decoration: none;
@@ -926,10 +997,10 @@ table {
   }
 }
 @media screen and (min-width: 992px) {
-  section.content {
-    border-top: 1px solid #e0e0e0;
+  .container {
+    width: 100%;
   }
-  section.content .main-image {
+  .container section.content .main-image {
     background: url("../img/feature-image-t.png");
     height: 250px;
     width: 100%;
@@ -938,76 +1009,173 @@ table {
     border-bottom: 1px solid #e0e0e0;
     height: 696px;
   }
-  section.content .main-image .desktop-nav {
+  .container section.content .main-image .desktop-nav {
     margin: 0 auto;
-    width: 980px;
+    width: calc(100% - 10px);
+    max-width: 950px;
     display: block;
+    padding-top: 32px;
+    padding-left: 10px;
+    color: #fff;
   }
-  section.content .main-image .desktop-nav .review-top .col-i {
+  .container section.content .main-image .desktop-nav .review-top #hamburger-desktop {
+    cursor: pointer;
+  }
+  .container section.content .main-image .desktop-nav .review-top .col-i,
+  .container section.content .main-image .desktop-nav .review-top .col-ii,
+  .container section.content .main-image .desktop-nav .review-top .col-iii {
     float: left;
   }
-  section.content .main-image .desktop-nav .review-top .col-i div {
+  .container section.content .main-image .desktop-nav .review-top .col-i div,
+  .container section.content .main-image .desktop-nav .review-top .col-ii div,
+  .container section.content .main-image .desktop-nav .review-top .col-iii div {
     float: left;
   }
-  section.content .main-image .desktop-nav .review-top .col-i div .hamburger {
+  .container section.content .main-image .desktop-nav .review-top .col-i div .hamburger,
+  .container section.content .main-image .desktop-nav .review-top .col-ii div .hamburger,
+  .container section.content .main-image .desktop-nav .review-top .col-iii div .hamburger {
     float: left;
   }
-  section.content .main-image .desktop-nav .review-date {
+  .container section.content .main-image .desktop-nav .review-top .col-i {
+    padding-top: 30px;
+    width: calc(42.8% - 10px);
+    max-width: 411px;
+  }
+  .container section.content .main-image .desktop-nav .review-top .col-i .menu-text {
+    padding-left: 10px;
+    font-family: 'Helvetica Neue Ltd';
+    letter-spacing: 2.5px;
+    font-size: 12px;
+  }
+  .container section.content .main-image .desktop-nav .review-top .col-ii {
+    width: 14.375%;
+    max-width: 138px;
+  }
+  .container section.content .main-image .desktop-nav .review-top .col-iii {
+    padding-top: 30px;
+    width: calc(41.667% - 10px);
+    max-width: 400px;
+    text-align: right;
+  }
+  .container section.content .main-image .desktop-nav .review-top .col-iii #searchbox {
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+  }
+  .container section.content .main-image .desktop-nav .review-top .col-iii input {
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #cfd3d3;
+    outline: none;
+    color: #fff;
+    font-size: 12px;
+    font-family: "Open Sans";
+    width: 158px;
+    padding-bottom: 7px;
+  }
+  .container section.content .main-image .desktop-nav .review-top .col-iii ::-webkit-input-placeholder {
+    color: #b8bcba;
+  }
+  .container section.content .main-image .desktop-nav .review-date {
     clear: both;
+    font-family: "Georgia";
+    font-size: 13px;
+    line-height: 20.8px;
   }
-  section.content .main-image .desktop-nav .review-menu {
+  .container section.content .main-image .desktop-nav .review-date #date {
+    float: left;
+    width: 57.2%;
+    max-width: 549px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .container section.content .main-image .desktop-nav .review-date .slogan {
+    float: left;
+    padding-top: 10px;
+    text-align: right;
+    max-width: 400px;
+    width: 41.667%;
+  }
+  .container section.content .main-image .desktop-nav .review-menu {
     clear: both;
+    border-top: 1px solid #cfd3d3;
+    border-bottom: 1px solid #cfd3d3;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 15px;
   }
-  section.content .main-image .desktop-nav .review-menu ul li {
-    display: inline;
+  .container section.content .main-image .desktop-nav .review-menu ul li {
+    font-family: 'Helvetica Neue Ltd';
+    color: #fff;
+    -webkit-font-smoothing: auto;
+    font-size: 11px;
+    line-height: 21px;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding-right: 30px;
+    cursor: pointer;
   }
-  section.content .main-image .main-title {
-    padding-top: 306px;
-    width: 960px;
+  .container section.content .main-image .desktop-nav .review-menu ul li:last-child {
+    padding-right: 0;
+  }
+  .container section.content .main-image .main-title {
+    padding-top: 130px;
+    width: 100%;
+    max-width: 960px;
     margin: 0 auto;
     font-family: 'Knockout', sans-serif;
     color: #fff;
   }
-  section.content .main-image .main-title p {
+  .container section.content .main-image .main-title p {
     font-size: 11px;
     letter-spacing: 1.5px;
     padding-bottom: 12px;
+    font-weight: 800;
   }
-  section.content .main-image .main-title h1 {
+  .container section.content .main-image .main-title .category {
+    display: none;
+  }
+  .container section.content .main-image .main-title h1 {
     font-size: 115px;
     line-height: 90px;
   }
-  section.content .main-image .main-title a {
+  .container section.content .main-image .main-title .desktop {
+    max-width: 672px;
+  }
+  .container section.content .main-image .main-title a {
     text-decoration: none;
     color: #fff;
   }
-  section.trending-posts {
+  .container section.trending-posts {
     padding-left: 13px;
     padding-right: 13px;
-    width: 960px;
+    max-width: 960px;
+    width: calc(100% - 46px);
     margin: 0 auto;
   }
-  section.trending-posts h2 {
+  .container section.trending-posts h2 {
     padding-top: 38px;
     text-align: center;
     padding-bottom: 34px;
     font-size: 11px;
   }
-  section.trending-posts article {
+  .container section.trending-posts article {
     margin-bottom: 20px;
     box-sizing: content-box;
-    width: 47%;
+    width: calc(50% - 36px);
+    max-width: 440px;
     float: left;
     padding-left: 20px;
   }
-  section.trending-posts article p {
+  .container section.trending-posts article p {
     color: #fff;
   }
-  section.trending-posts article p.category {
+  .container section.trending-posts article p.category {
     font-size: 11px;
     padding-top: 128px;
   }
-  section.trending-posts article h2.title {
+  .container section.trending-posts article h2.title {
     font-family: 'Palatino';
     padding-top: 13px;
     text-align: left;
@@ -1016,69 +1184,73 @@ table {
     line-height: 29px;
     max-width: 210px;
   }
-  section.trending-posts article .read-more-trending {
+  .container section.trending-posts article .read-more-trending {
     font-family: 'Open Sans';
     font-size: 10px;
     font-weight: 800;
     letter-spacing: 2px;
   }
-  section.trending-posts article:nth-child(4) {
+  .container section.trending-posts article:nth-child(2) {
+    margin-right: 20px;
+  }
+  .container section.trending-posts article:nth-child(4) {
     width: 30%;
   }
-  section.trending-posts article:nth-child(5) {
+  .container section.trending-posts article:nth-child(5) {
     width: 30%;
   }
-  section.trending-posts article:last-child {
+  .container section.trending-posts article:last-child {
     margin-bottom: 0px;
     width: 30%;
   }
-  section.trending-posts article.article1 {
+  .container section.trending-posts article.article1 {
     background: url("../img/img2.png");
     height: 362px;
     background-size: cover;
     background-repeat: no-repeat;
   }
-  section.trending-posts article.article2 {
+  .container section.trending-posts article.article2 {
     background: url("../img/img3.png");
     height: 362px;
     background-size: cover;
     background-repeat: no-repeat;
   }
-  section.trending-posts article.article2 h2 {
+  .container section.trending-posts article.article2 h2 {
     max-width: initial;
   }
-  section.trending-posts article.article3 {
+  .container section.trending-posts article.article3 {
     background: url("../img/img4.png");
     height: 362px;
     background-size: cover;
     background-repeat: no-repeat;
   }
-  section.trending-posts article.article4 {
+  .container section.trending-posts article.article4 {
     background: url("../img/img5.png");
     height: 362px;
     background-size: cover;
     background-repeat: no-repeat;
   }
-  section.trending-posts article.article5 {
+  .container section.trending-posts article.article5 {
     background: url("../img/img6.png");
     height: 362px;
     background-size: cover;
     background-repeat: no-repeat;
   }
-  section.recent-reviews {
+  .container section.recent-reviews {
     clear: both;
-    width: 960px;
+    width: 100%;
+    max-width: 960px;
     margin: 0 auto;
     padding-bottom: 38px;
   }
-  section.recent-reviews h2 {
+  .container section.recent-reviews h2 {
     padding-top: 38px;
     text-align: center;
     padding-bottom: 34px;
     border-bottom: 2px solid #b8b8b8;
     font-size: 11px;
   }
-  section.recent-reviews .recent-main {
+  .container section.recent-reviews .recent-main {
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 34px;
@@ -1088,7 +1260,7 @@ table {
     height: 250px;
     border-bottom: 2px solid #b8b8b8;
   }
-  section.recent-reviews .recent-main article h3 {
+  .container section.recent-reviews .recent-main article h3 {
     clear: both;
     padding-top: 0px;
     font-family: "Georgia";
@@ -1100,13 +1272,13 @@ table {
     text-decoration: underline;
     color: #2f2f2f;
   }
-  section.recent-reviews .recent-main article p {
+  .container section.recent-reviews .recent-main article p {
     font-family: "Open Sans";
     color: #9f9f9f;
     font-size: 16px;
     text-align: center;
   }
-  section.recent-reviews .recent-main article .read-more-link {
+  .container section.recent-reviews .recent-main article .read-more-link {
     margin-top: 22px;
     font-family: "Open Sans";
     font-size: 10px;
@@ -1114,78 +1286,79 @@ table {
     color: #000;
     font-weight: 800;
   }
-  section.recent-reviews .recent-main .cat-heading {
+  .container section.recent-reviews .recent-main .cat-heading {
     font-size: 11px;
   }
-  section.recent-reviews .recent-main span {
+  .container section.recent-reviews .recent-main span {
     color: #da4f1f;
     padding-bottom: 46px;
   }
-  section.recent-reviews .recent-main .tiny-logo {
+  .container section.recent-reviews .recent-main .tiny-logo {
     float: right;
   }
-  .last-col {
+  .container .last-col {
     margin: 0 auto;
-    width: 960px;
+    width: 100%;
+    max-width: 960px;
   }
-  .last-col section.recent-blog-posts {
+  .container .last-col section.recent-blog-posts {
     clear: both;
     width: 66.3%;
     float: left;
   }
-  .last-col section.recent-blog-posts h2 {
+  .container .last-col section.recent-blog-posts h2 {
     text-align: center;
     padding-bottom: 34px;
     font-size: 11px;
     border-bottom: 2px solid #b8b8b8;
   }
-  .last-col section.recent-blog-posts article {
+  .container .last-col section.recent-blog-posts article {
     padding-left: 17px;
     padding-right: 17px;
     border-bottom: 2px solid #b8b8b8;
   }
-  .last-col section.recent-blog-posts article .article1 {
+  .container .last-col section.recent-blog-posts article .article1 {
     margin-top: 26px;
     background-image: url("../img/blogposts1.png");
     background-size: cover;
     height: 147px;
     width: 100%;
   }
-  .last-col section.recent-blog-posts article .article2 {
+  .container .last-col section.recent-blog-posts article .article2 {
     margin-top: 26px;
     background-image: url("../img/blogposts2.png");
     background-size: cover;
     height: 147px;
     width: 100%;
   }
-  .last-col section.recent-blog-posts article .article3 {
+  .container .last-col section.recent-blog-posts article .article3 {
     margin-top: 26px;
     background-image: url("../img/blogposts1.png");
     background-size: cover;
     height: 147px;
     width: 100%;
   }
-  .last-col section.recent-blog-posts article .article4 {
+  .container .last-col section.recent-blog-posts article .article4 {
     margin-top: 26px;
     background-image: url("../img/blogposts2.png");
     background-size: cover;
     height: 147px;
     width: 100%;
   }
-  .last-col section.recent-blog-posts article h3 {
+  .container .last-col section.recent-blog-posts article h3 {
     margin-top: 30px;
     font-size: 22px;
     line-height: 26px;
     text-align: center;
     padding-bottom: 20px;
   }
-  .last-col section.recent-blog-posts article p {
+  .container .last-col section.recent-blog-posts article p {
     font-family: "Open Sans";
     text-align: center;
     color: #9f9f9f;
     font-size: 16px;
   }
-  .last-col section.recent-blog-posts article .read-more-link {
+  .container .last-col section.recent-blog-posts article .read-more-link {
     margin-top: 22px;
     font-family: "Open Sans";
     font-size: 10px;
@@ -1194,21 +1367,21 @@ table {
     font-weight: 800;
     margin-bottom: 30px;
   }
-  .last-col section.stay-in-touch {
+  .container .last-col section.stay-in-touch {
     padding-top: 44px;
     padding-bottom: 31px;
     text-align: center;
     float: left;
     background-color: #f9f9f9;
   }
-  .last-col section.stay-in-touch span {
+  .container .last-col section.stay-in-touch span {
     color: #da4f1f;
     font-size: 12px;
     display: block;
     padding-bottom: 20px;
   }
-  .last-col section.stay-in-touch input[type=text],
-  .last-col section.stay-in-touch input[type=email] {
+  .container .last-col section.stay-in-touch input[type=text],
+  .container .last-col section.stay-in-touch input[type=email] {
     width: 100%;
     border: 1px solid #c2c2c2;
     margin-bottom: 10px;
@@ -1217,7 +1390,7 @@ table {
     font-family: "Open Sans";
     font-size: 14.84px;
   }
-  .last-col section.stay-in-touch input[type=submit] {
+  .container .last-col section.stay-in-touch input[type=submit] {
     width: 127px;
     height: 37px;
     background-color: #5ca3c4;
@@ -1227,64 +1400,93 @@ table {
     font-size: 14.84px;
     letter-spacing: 1px;
   }
-  .last-col section.social-media {
+  .container .last-col section.social-media {
     border-top: 2px solid #b8b8b8;
     padding-bottom: 47px;
     float: left;
     width: 33%;
   }
-  .last-col section.social-media h3 {
+  .container .last-col section.social-media h3 {
     margin-top: 37px;
     color: #da4f1f;
     font-size: 12px;
     text-align: center;
     padding-bottom: 34px;
   }
-  .last-col section.social-media .post {
+  .container .last-col section.social-media .post {
     clear: both;
     width: calc(100% - 70px);
   }
-  .last-col section.social-media .post .social-icon {
+  .container .last-col section.social-media .post .social-icon {
     float: left;
     width: 38px;
   }
-  .last-col section.social-media .post .post-content {
+  .container .last-col section.social-media .post .post-content {
     float: left;
     width: calc(100% - 51px);
     padding-left: 13px;
   }
-  .last-col section.social-footer {
+  .container .last-col section.social-footer {
     clear: both;
     border-top: 2px solid #b8b8b8;
     position: relative;
   }
-  .last-col section.social-footer ul li {
+  .container .last-col section.social-footer ul li {
     display: inline;
   }
-  footer {
+  .container footer {
     padding-top: 45px;
     padding-left: 35px;
     padding-bottom: 35px;
-    width: 960px;
+    width: calc(100% - 35px);
+    max-width: 960px;
     margin: 0 auto;
   }
-  footer table {
+  .container footer table {
     font-family: "Open Sans";
     font-size: 11px;
     color: #c0c0c0;
   }
-  footer table th {
+  .container footer table th {
     font-weight: 600;
     color: #494949;
     text-align: left;
   }
-  footer table td {
+  .container footer table td {
     text-align: left;
   }
-  footer table th:last-child,
-  footer table td:last-child {
+  .container footer table th:last-child,
+  .container footer table td:last-child {
     padding-left: 26px;
   }
+  .sidebar-active {
+    width: calc(100% - 211px);
+    float: left;
+  }
+}
+[class^=arr-] {
+/* Arrows @RCB */
+  border: solid currentColor;
+  border-width: 0 0.05em 0.05em 0;
+  display: inline-block;
+  padding: 0.25em;
+  color: #fff;
+  float: right;
+  position: relative;
+  top: 5px;
+  left: 6px;
+}
+.arr-right {
+  transform: rotate(-45deg);
+}
+.arr-left {
+  transform: rotate(135deg);
+}
+.arr-up {
+  transform: rotate(-135deg);
+}
+.arr-down {
+  transform: rotate(45deg);
 }
 /*
 	Queries
