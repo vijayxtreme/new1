@@ -1,20 +1,43 @@
-@media screen and (min-width:600px) and (max-width:991px)
+@media screen and (min-width:992px)
 	section.content
 		border-top:1px solid #e0e0e0
-		
+
 		.main-image
 			background:url('../img/feature-image-t.png')
-			background-position:0px -0px
-			height:559px
+			height:250px
 			width:100%
 			background-repeat:no-repeat
 			background-size:cover
 			border-bottom:1px solid #e0e0e0
+			height:696px 
 			
+			.desktop-nav
+				margin:0 auto
+				width:980px
+				display:block
+
+				.review-top
+					.col-i 
+						float:left
+						div
+							float:left
+							.hamburger
+								float:left
+			
+				.review-date
+					clear:both
+				
+				.review-menu
+					clear:both
+					ul 
+						li 
+							display:inline
+
+				
 			.main-title
-				padding-top:123px
-				padding-left:20px
-				max-width:678px
+				padding-top:306px
+				width:960px
+				margin:0 auto
 				font-family:knockout
 				color:white
 				
@@ -25,8 +48,8 @@
 					padding-bottom:12px
 				
 				h1
-					font-size:116px
-					line-height:91px
+					font-size:115px
+					line-height:90px
 					
 				a
 					text-decoration:none
@@ -36,6 +59,8 @@
 	section.trending-posts
 		padding-left:13px
 		padding-right:13px
+		width:960px
+		margin:0 auto
 		
 		h2
 			padding-top:38px
@@ -47,11 +72,9 @@
 		article
 			margin-bottom:20px
 			box-sizing:content-box
-			
-			padding-left:20px
-			width:calc(50% - 33px)
-			
+			width:47%
 			float:left
+			padding-left:20px
 			p
 				color:white
 			
@@ -75,18 +98,15 @@
 				font-weight:800
 				letter-spacing:2.0px
 		
-		article:nth-child(2)
-			margin-right:20px
-
 		article:nth-child(4)
-			width:calc(100% - 24px)
-			margin-right:0px
-		
+			width:30%
+			
 		article:nth-child(5)
-			margin-right:20px
+			width:30%
 
 		article:last-child
 			margin-bottom:0px
+			width:30%
 
 		article.article1
 			background:url('../img/img2.png')
@@ -123,7 +143,9 @@
 
 	section.recent-reviews
 		clear:both
-		
+		width:960px
+		margin:0 auto
+
 		h2
 			padding-top:38px
 			text-align:center
@@ -137,11 +159,11 @@
 			padding-right:0px
 			padding-top:34px
 			padding-bottom:39px
-			width:50%
+			width:33%
 			float:left
-			height:373px
+			height:250px
+			
 			article 
-				
 				h3
 					clear:both
 					padding-top:0px
@@ -184,154 +206,152 @@
 		
 		padding-bottom:38px
 
-	section.recent-blog-posts
-		clear:both
+	.last-col
+		margin:0 auto
+		width:960px
 
-		h2
-			text-align:center
-			padding-bottom:34px
-			@extend .futura
-			font-size:11px
-			border-bottom:2px solid #b8b8b8	
-		article 
-			padding-left:17px
-			padding-right:17px
-			
-			.article1
-				margin-top:0px
-				background-image:url('../img/blogposts1.png')
-				background-size:cover
-				background-repeat:no-repeat
-				height:147px
-				width:50%
-				float:left
+		section.recent-blog-posts
+			clear:both
+			width:66.3%
+			float:left
+
+			h2
 				
-			.article2
-				margin-top:0px
-				background-image:url('../img/blogposts2.png')
-				background-size:cover
-				background-repeat:no-repeat
-				height:147px
-				width:50%
-				float:left
-				
-			.article3
-				margin-top:0px
-				background-image:url('../img/blogposts1.png')
-				background-size:cover
-				background-repeat:no-repeat
-				height:147px
-				width:50%
-				float:left
-				
-			.article4
-				margin-top:0px
-				background-image:url('../img/blogposts2.png')
-				background-size:cover
-				background-repeat:no-repeat
-				height:147px
-				width:50%
-				float:left
-				
-			h3
-				margin-top:30px
-				font-size:22px
-				line-height:26px
 				text-align:center
+				padding-bottom:34px
+				@extend .futura
+				font-size:11px
+				border-bottom:2px solid #b8b8b8	
+			article 
+				padding-left:17px
+				padding-right:17px
+				.article1
+					margin-top:26px
+					background-image:url('../img/blogposts1.png')
+					background-size:cover
+					height:147px
+					width:100%
+					
+				.article2
+					margin-top:26px
+					background-image:url('../img/blogposts2.png')
+					background-size:cover
+					height:147px
+					width:100%
+					
+				.article3
+					margin-top:26px
+					background-image:url('../img/blogposts1.png')
+					background-size:cover
+					height:147px
+					width:100%
+					
+				.article4
+					margin-top:26px
+					background-image:url('../img/blogposts2.png')
+					background-size:cover
+					height:147px
+					width:100%
+					
+				h3
+					margin-top:30px
+					font-size:22px
+					line-height:26px
+					text-align:center
+					padding-bottom:20px
+					
+				p 
+					font-family:"Open Sans"
+					text-align:center
+					color:#9f9f9f
+					font-size:16px
+					
+				.read-more-link
+					margin-top:22px
+					font-family:"Open Sans"
+					font-size:10px
+					letter-spacing:2.0px
+					color:black
+					font-weight:800
+					margin-bottom:30px
+
+				border-bottom:2px solid #b8b8b8
+		
+		section.stay-in-touch
+			padding-top:44px
+			padding-bottom:31px
+			text-align:center
+			float:left
+			background-color:#f9f9f9
+			
+			span 
+				color:#da4f1f
+				@extend .futura
+				font-size:12px
+				display:block
 				padding-bottom:20px
 				
-			p 
-				font-family:"Open Sans"
+			input[type=text], input[type=email]
+				width:100%
+				border:1px solid #c2c2c2
+				margin-bottom:10px
 				text-align:center
-				color:#9f9f9f
-				font-size:16px
-				
-			.read-more-link
-				margin-top:22px
+				height:33px
 				font-family:"Open Sans"
-				font-size:10px
-				letter-spacing:2.0px
-				color:black
-				font-weight:800
-				margin-bottom:30px
-
-			border-bottom:2px solid #b8b8b8
-	
-	section.stay-in-touch
-		padding-top:44px
-		padding-left:0px
-		padding-bottom:31px
-		text-align:center
-		width:50%
-		float:left
-		
-		span 
-			color:#da4f1f
-			@extend .futura
-			font-size:12px
-			display:block
-			padding-bottom:20px
+				font-size:14.84px	
 			
-		input[type=text], input[type=email]
-			width:100%
-			border:1px solid #c2c2c2
-			margin-bottom:10px
-			text-align:center
-			height:33px
-			font-family:"Open Sans"
-			font-size:14.84px	
-		
-		input[type=submit]
-			width:127px
-			height:37px
-			background-color:#5ca3c4
-			border:0px
-			color:white
-			font-family:"Open Sans"
-			font-size:14.84px
-			letter-spacing:1.0px
+			input[type=submit]
+				width:127px
+				height:37px
+				background-color:#5ca3c4
+				border:0px
+				color:white
+				font-family:"Open Sans"
+				font-size:14.84px
+				letter-spacing:1.0px
 
-	section.social-media 
-		border-top:2px solid #b8b8b8
-		padding-left:0px
-		padding-bottom:47px
-		float:left
-		width:50%
-		
+		section.social-media 
+			border-top:2px solid #b8b8b8
+			padding-bottom:47px
+			float:left
+			width:33%
 
-		h3 
-			margin-top:37px
-			color:#da4f1f
-			@extend .futura
-			font-size:12px
-			text-align:center
-			padding-bottom:34px
-		
-		.post
+			h3 
+				margin-top:37px
+				color:#da4f1f
+				@extend .futura
+				font-size:12px
+				text-align:center
+				padding-bottom:34px
+			
+			.post
+				clear:both
+				width:calc(100% - 70px)
+							
+				.social-icon
+					float:left
+					width:38px
+					
+				.post-content
+					float:left
+					width:calc(100% - 51px)
+					padding-left:13px
+					
+		section.social-footer
 			clear:both
-			width:calc(100% - 70px)
-						
-			.social-icon
-				float:left
-				width:38px
-				
-			.post-content
-				float:left
-				width:calc(100% - 51px)
-				padding-left:13px
-				
-	section.social-footer
-		border-top:2px solid #b8b8b8
+			border-top:2px solid #b8b8b8
+			position:relative
+			
+			ul
+				li 
+					display:inline
 		
-		ul
-			li 
-				display:inline
-	
 	footer 
 		padding-top:45px
 		padding-left:35px
 		padding-bottom:35px
-		width:calc(100% - 70px)
+		width:960px
+		margin:0 auto
 		
 		table 
 			font-family:"Open Sans"
