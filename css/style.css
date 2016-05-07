@@ -21,12 +21,14 @@ section.recent-reviews .recent-main .cat-heading,
 section.recent-blog-posts h2,
 section.stay-in-touch span,
 section.social-media h3,
+section.recent-blog-posts article .cat-heading,
 .container section.content .main-image .main-title p,
 .container section.trending-posts h2,
 .container section.trending-posts article p.category,
 .container section.recent-reviews h2,
 .container section.recent-reviews .recent-main .cat-heading,
 .container .last-col section.recent-blog-posts h2,
+.container .last-col section.recent-blog-posts article .cat-heading,
 .container .last-col section.stay-in-touch span,
 .container .last-col section.social-media h3 {
   font-family: 'Futura';
@@ -164,13 +166,70 @@ table {
 aside {
   display: none;
 }
+#hamburger-mobile {
+  display: none;
+}
+.recent-blog-posts .cat-heading {
+  display: none;
+}
 @media screen and (min-width: 992px) {
   aside {
-    float: left;
+    position: absolute;
+    z-index: 100;
     height: 3470px;
     width: 159px;
     background-color: #77adb7;
-    position: relative;
+    font-family: "Open Sans";
+    padding-right: 26px;
+    padding-left: 26px;
+    color: #fff;
+  }
+  aside ul li {
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+  }
+  aside .close-btn {
+    text-align: right;
+    padding-top: 24px;
+  }
+  aside .social-icons {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+  aside .social-icons ul li {
+    display: inline;
+  }
+  aside .aside-menu h4 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  aside .aside-menu #home-heading {
+    padding-bottom: 18px;
+  }
+  aside .aside-menu #dating-heading {
+    padding-top: 61px;
+    padding-bottom: 25px;
+  }
+  aside .aside-menu #automation-heading {
+    padding-top: 61px;
+    padding-bottom: 25px;
+  }
+  aside .aside-menu #subboxes-heading {
+    padding-top: 51px;
+    padding-bottom: 25px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  aside {
+    height: 3470px;
+    width: 159px;
+    background-color: #77adb7;
+    position: absolute;
+    right: 0px;
+    top: 67px;
+    z-index: 100;
     font-family: "Open Sans";
     padding-right: 26px;
     padding-left: 26px;
@@ -238,6 +297,23 @@ aside {
   header .mobile-menu {
     float: right;
   }
+  header .mobile-menu #search {
+    background: url("../img/magnifying.png");
+    background-size: 16px 15px;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 27px;
+    margin-right: 10px;
+    margin-top: 15px;
+    float: left;
+    cursor: pointer;
+  }
+  header .mobile-menu #hamburger-tablet {
+    display: none;
+  }
+  header .mobile-menu #hamburger-mobile {
+    display: block;
+  }
   header .mobile-menu .hamburger {
     border-left: 1px solid #ccc;
     padding-left: 20px;
@@ -252,6 +328,27 @@ aside {
   header .mobile-menu .hamburger img {
     height: 100%;
     width: 100%;
+  }
+  header #searchbar {
+    display: none;
+    clear: both;
+    padding-left: 46px;
+    padding-right: 46px;
+    width: calc(100% - 92px);
+    position: relative;
+    top: -6px;
+    background: #fff;
+    height: 50px;
+  }
+  header #searchbar #search-tablet {
+    outline: none;
+    width: 100%;
+    border: none;
+    height: 45px;
+    font-family: "Open Sans";
+    color: #d1d1d1;
+    font-size: 16.21px;
+    line-height: 30.57px;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 991px) {
@@ -306,6 +403,27 @@ aside {
     height: 100%;
     width: 100%;
   }
+  header #searchbar {
+    display: none;
+    clear: both;
+    padding-left: 46px;
+    padding-right: 46px;
+    width: calc(100% - 92px);
+    position: relative;
+    top: -6px;
+    background: #fff;
+    height: 50px;
+  }
+  header #searchbar #search-tablet {
+    outline: none;
+    width: 100%;
+    border: none;
+    height: 45px;
+    font-family: "Open Sans";
+    color: #d1d1d1;
+    font-size: 16.21px;
+    line-height: 30.57px;
+  }
 }
 @media screen and (min-width: 992px) {
   header .header-logo {
@@ -338,6 +456,9 @@ aside {
     height: 100%;
     width: 100%;
   }
+  header #searchbar {
+    display: none;
+  }
 }
 @media screen and (max-width: 599px) {
   section.content {
@@ -363,6 +484,9 @@ aside {
     letter-spacing: 1.5px;
     padding-bottom: 12px;
   }
+  section.content .main-image .main-title .read-more {
+    display: none;
+  }
   section.content .main-image .main-title h1 {
     font-size: 40px;
     line-height: 35px;
@@ -385,6 +509,7 @@ aside {
     padding-top: 38px;
     text-align: center;
     padding-bottom: 34px;
+    font-weight: 800;
     font-size: 11px;
   }
   section.trending-posts article {
@@ -402,16 +527,19 @@ aside {
   }
   section.trending-posts article h2.title {
     font-family: Georgia;
+    font-style: italic;
     padding-top: 13px;
     text-align: left;
     color: #fff;
+    font-weight: 500;
     font-size: 25px;
     line-height: 29px;
-    max-width: 210px;
+    width: calc(100% - 90px);
+    letter-spacing: 0px;
   }
   section.trending-posts article .read-more-trending {
     font-family: 'Open Sans';
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 800;
     letter-spacing: 2px;
   }
@@ -451,15 +579,13 @@ aside {
     background-size: cover;
     background-repeat: no-repeat;
   }
-  section.recent-reviews {
-    padding-bottom: 38px;
-  }
   section.recent-reviews h2 {
     padding-top: 38px;
     text-align: center;
     padding-bottom: 34px;
     border-top: 1px solid #e6e6e6;
     font-size: 11px;
+    font-weight: 800;
   }
   section.recent-reviews .recent-main {
     padding-left: 39px;
@@ -474,10 +600,12 @@ aside {
     font-family: "Georgia";
     font-style: italic;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 24px;
     text-align: center;
     padding-bottom: 21px;
-    text-decoration: underline;
+    text-decoration: none;
+    width: 90%;
+    margin: 0 auto;
     color: #2f2f2f;
   }
   section.recent-reviews .recent-main article p {
@@ -485,11 +613,12 @@ aside {
     color: #9f9f9f;
     font-size: 16px;
     text-align: center;
+    line-height: 22px;
   }
   section.recent-reviews .recent-main article .read-more-link {
     margin-top: 22px;
     font-family: "Open Sans";
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 2px;
     color: #000;
     font-weight: 800;
@@ -499,14 +628,18 @@ aside {
   }
   section.recent-reviews .recent-main span {
     color: #da4f1f;
-    padding-bottom: 46px;
+    padding-bottom: 29px;
   }
   section.recent-reviews .recent-main .tiny-logo {
+    position: relative;
+    top: -5px;
     float: right;
   }
   section.recent-blog-posts h2 {
+    padding-top: 32px;
     text-align: center;
-    padding-bottom: 34px;
+    padding-bottom: 32px;
+    font-weight: 800;
     font-size: 11px;
     border-top: 1px solid #e6e6e6;
   }
@@ -544,10 +677,13 @@ aside {
     width: 100%;
   }
   section.recent-blog-posts article h3 {
+    margin: 0 auto;
     margin-top: 30px;
     font-size: 22px;
-    line-height: 26px;
+    font-family: Georgia;
+    line-height: 24px;
     text-align: center;
+    width: calc(100% - 90px);
     padding-bottom: 20px;
   }
   section.recent-blog-posts article p {
@@ -555,6 +691,7 @@ aside {
     text-align: center;
     color: #9f9f9f;
     font-size: 16px;
+    line-height: 20px;
   }
   section.recent-blog-posts article .read-more-link {
     margin-top: 22px;
@@ -578,7 +715,7 @@ aside {
     color: #da4f1f;
     font-size: 12px;
     display: block;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
   section.stay-in-touch input[type=text],
   section.stay-in-touch input[type=email] {
@@ -600,6 +737,7 @@ aside {
     font-size: 11.84px;
     font-weight: 800;
     letter-spacing: 2px;
+    margin-top: 10px;
   }
   section.social-media {
     border-top: 1px solid #e6e6e6;
@@ -708,7 +846,10 @@ aside {
   section.content .main-image .main-title p {
     font-size: 11px;
     letter-spacing: 1.5px;
+    margin-top: 30px;
+    padding-left: 0px;
     padding-bottom: 12px;
+    font-weight: 900;
   }
   section.content .main-image .main-title h1 {
     font-size: 116px;
@@ -719,12 +860,13 @@ aside {
     color: #fff;
   }
   section.trending-posts {
-    padding-left: 13px;
+    padding-left: 17px;
     padding-right: 13px;
   }
   section.trending-posts h2 {
     padding-top: 38px;
     text-align: center;
+    font-weight: 800;
     padding-bottom: 34px;
     font-size: 11px;
   }
@@ -743,13 +885,16 @@ aside {
     padding-top: 128px;
   }
   section.trending-posts article h2.title {
-    font-family: 'Palatino';
+    font-family: Georgia;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 1px;
     padding-top: 13px;
     text-align: left;
     color: #fff;
     font-size: 25px;
     line-height: 29px;
-    max-width: 210px;
+    width: calc(100% - 40px);
   }
   section.trending-posts article .read-more-trending {
     font-family: 'Open Sans';
@@ -763,6 +908,9 @@ aside {
   section.trending-posts article:nth-child(4) {
     width: calc(100% - 24px);
     margin-right: 0px;
+  }
+  section.trending-posts article:nth-child(4) h2.title {
+    width: 35%;
   }
   section.trending-posts article:nth-child(5) {
     margin-right: 20px;
@@ -812,6 +960,7 @@ aside {
     padding-top: 38px;
     text-align: center;
     padding-bottom: 34px;
+    font-weight: 800;
     font-size: 11px;
   }
   section.recent-reviews .recent-main {
@@ -819,7 +968,7 @@ aside {
     padding-left: 33px;
     padding-right: 19px;
     padding-top: 37px;
-    padding-bottom: 39px;
+    padding-bottom: 19px;
     width: calc(50% - 53px);
     float: left;
     height: 235px;
@@ -831,12 +980,13 @@ aside {
   }
   section.recent-reviews .recent-main article h3 {
     clear: both;
-    padding-top: 0px;
+    padding-top: 10px;
     font-family: "Georgia";
     font-style: italic;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 23px;
     text-align: center;
+    max-width: calc(100% - 30px);
     padding-bottom: 18px;
     text-decoration: none;
     color: #2f2f2f;
@@ -845,6 +995,7 @@ aside {
     font-family: "Open Sans";
     color: #9f9f9f;
     font-size: 16px;
+    line-height: 21px;
     text-align: center;
   }
   section.recent-reviews .recent-main article .read-more-link {
@@ -868,7 +1019,7 @@ aside {
   }
   section.recent-reviews .recent-main .tiny-logo {
     position: absolute;
-    top: 26px;
+    top: 20px;
     right: 37px;
   }
   section.recent-reviews .recent-main:nth-child(odd) {
@@ -882,6 +1033,7 @@ aside {
     padding-top: 21px;
     padding-bottom: 21px;
     font-size: 11px;
+    font-weight: 800;
     border-bottom: 1px solid #e6e6e6;
   }
   section.recent-blog-posts article {
@@ -889,12 +1041,14 @@ aside {
     padding-left: 40px;
     padding-right: 53px;
     border-bottom: 1px solid #e6e6e6;
+    min-height: 176px;
   }
   section.recent-blog-posts article .article1 {
     margin-right: 44px;
     background-image: url("../img/article-b1-t.png");
     background-repeat: no-repeat;
-    height: 147px;
+    background-size: cover;
+    height: 135px;
     width: 40.5%;
     max-width: 203px;
     float: left;
@@ -903,7 +1057,8 @@ aside {
     margin-right: 44px;
     background-image: url("../img/article-b2-t.png");
     background-repeat: no-repeat;
-    height: 147px;
+    background-size: cover;
+    height: 135px;
     width: 40.5%;
     max-width: 203px;
     float: left;
@@ -912,7 +1067,8 @@ aside {
     margin-right: 44px;
     background-image: url("../img/article-b1-t.png");
     background-repeat: no-repeat;
-    height: 147px;
+    background-size: cover;
+    height: 135px;
     width: 40.5%;
     max-width: 203px;
     float: left;
@@ -921,16 +1077,25 @@ aside {
     margin-right: 44px;
     background-image: url("../img/article-b2-t.png");
     background-repeat: no-repeat;
-    height: 147px;
+    background-size: cover;
+    height: 135px;
     width: 40.5%;
     max-width: 203px;
     float: left;
   }
+  section.recent-blog-posts article .cat-heading {
+    margin-top: 41px;
+    font-size: 9px;
+    display: block;
+    color: #da4f1f;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
   section.recent-blog-posts article h3 {
-    margin-top: 46px;
     font-size: 20.31px;
     line-height: 23.46px;
     text-align: left;
+    width: calc(100% - 40px);
     padding-bottom: 10px;
     font-family: "Georgia";
     font-style: italic;
@@ -939,17 +1104,18 @@ aside {
     font-family: "Open Sans";
     text-align: left;
     color: #9f9f9f;
-    font-size: 12.5px;
-    line-height: 17.58px;
+    width: calc(100% - 60px);
+    font-size: 14.5px;
+    line-height: 18.58px;
   }
   section.recent-blog-posts article .read-more-link {
-    margin-top: 22px;
+    margin-top: 10px;
     font-family: "Open Sans";
     font-size: 10px;
     letter-spacing: 2px;
     color: #000;
     font-weight: 800;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
   }
   section.stay-in-touch {
     padding-top: 44px;
@@ -987,6 +1153,7 @@ aside {
     font-weight: 800;
     font-size: 9.84px;
     letter-spacing: 2px;
+    margin-top: 15px;
   }
   section.social-media {
     padding-left: 54px;
@@ -1100,10 +1267,10 @@ aside {
   }
   .container section.content .main-image .desktop-nav {
     margin: 0 auto;
-    width: calc(100% - 10px);
-    max-width: 950px;
+    width: 100%;
+    max-width: 960px;
     display: block;
-    padding-top: 32px;
+    padding-top: 22px;
     padding-left: 10px;
     color: #fff;
   }
@@ -1127,7 +1294,7 @@ aside {
   }
   .container section.content .main-image .desktop-nav .review-top .col-i {
     padding-top: 30px;
-    width: calc(42.8% - 10px);
+    width: 42.8%;
     max-width: 411px;
   }
   .container section.content .main-image .desktop-nav .review-top .col-i .menu-text {
@@ -1142,8 +1309,7 @@ aside {
   }
   .container section.content .main-image .desktop-nav .review-top .col-iii {
     padding-top: 30px;
-    width: calc(41.667% - 10px);
-    max-width: 400px;
+    width: 42.667%;
     text-align: right;
   }
   .container section.content .main-image .desktop-nav .review-top .col-iii #searchbox {
@@ -1176,15 +1342,14 @@ aside {
     float: left;
     width: 57.2%;
     max-width: 549px;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 10px;
   }
   .container section.content .main-image .desktop-nav .review-date .slogan {
     float: left;
-    padding-top: 10px;
+    padding-top: 5px;
     text-align: right;
-    max-width: 400px;
-    width: 41.667%;
+    width: 42.667%;
   }
   .container section.content .main-image .desktop-nav .review-menu {
     clear: both;
@@ -1193,6 +1358,7 @@ aside {
     text-align: center;
     padding-top: 16px;
     padding-bottom: 15px;
+    position: relative;
   }
   .container section.content .main-image .desktop-nav .review-menu ul li {
     font-family: 'Helvetica Neue Ltd';
@@ -1204,6 +1370,23 @@ aside {
     display: inline-block;
     padding-right: 30px;
     cursor: pointer;
+  }
+  .container section.content .main-image .desktop-nav .review-menu ul li ul {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    text-align: left;
+    padding-top: 35px;
+    padding-left: 33px;
+    padding-bottom: 39px;
+    width: 165px;
+    top: 52px;
+    box-shadow: 0px 16px 16px rgba(0,0,0,0.26);
+  }
+  .container section.content .main-image .desktop-nav .review-menu ul li ul li {
+    display: block;
+    color: #878787;
+    margin-bottom: 8px;
   }
   .container section.content .main-image .desktop-nav .review-menu ul li:last-child {
     padding-right: 0;
@@ -1217,11 +1400,12 @@ aside {
     color: #fff;
   }
   .container section.content .main-image .main-title p {
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 1.5px;
     padding-bottom: 12px;
-    font-weight: 800;
+    font-weight: 900;
     padding-left: 10px;
+    padding-top: 24px;
   }
   .container section.content .main-image .main-title .category {
     display: none;
@@ -1258,13 +1442,15 @@ aside {
     max-width: 440px;
     float: left;
     padding-left: 20px;
+    color: #da4f1f;
   }
   .container section.trending-posts article p {
     color: #fff;
   }
   .container section.trending-posts article p.category {
+    font-weight: 700;
     font-size: 11px;
-    padding-top: 128px;
+    padding-top: 142px;
   }
   .container section.trending-posts article h2.title {
     font-family: Georgia;
@@ -1280,7 +1466,7 @@ aside {
   .container section.trending-posts article .read-more-trending {
     font-family: 'Open Sans';
     font-size: 10px;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 2px;
   }
   .container section.trending-posts article:nth-child(2) {
@@ -1336,7 +1522,7 @@ aside {
   }
   .container section.recent-reviews {
     clear: both;
-    width: 100%;
+    width: calc(100% - 40px);
     max-width: 960px;
     margin: 0 auto;
     padding-bottom: 38px;
@@ -1382,24 +1568,25 @@ aside {
     font-family: "Open Sans";
     color: #9f9f9f;
     padding-top: 10px;
-    font-size: 14.5px;
-    line-height: 16px;
+    font-size: 13.5px;
+    line-height: 18px;
     text-align: left;
   }
   .container section.recent-reviews .recent-main article .read-more-link {
-    margin-top: 22px;
+    margin-top: 9px;
     font-family: "Open Sans";
-    font-size: 10px;
+    font-size: 9.5px;
     line-height: 7px;
     letter-spacing: 2px;
     color: #000;
-    font-weight: 800;
+    font-weight: 700;
   }
   .container section.recent-reviews .recent-main .cat-heading {
     padding-top: 52px;
     font-size: 10px;
     display: block;
     font-weight: 600;
+    color: #da4f1f;
     padding-bottom: 15px;
   }
   .container section.recent-reviews .recent-main span {
@@ -1432,26 +1619,28 @@ aside {
     clear: both;
     width: 66.3%;
     float: left;
-    padding-top: 30px;
+    padding-top: 60px;
   }
   .container .last-col section.recent-blog-posts h2 {
     text-align: left;
-    padding-bottom: 34px;
     font-size: 11px;
     font-weight: 600;
+    position: relative;
+    top: 0px;
+    margin-bottom: 20px;
   }
   .container .last-col section.recent-blog-posts article {
     border: 1px solid #e7e7e7;
     border-bottom: none;
     padding-left: 30px;
-    height: 247px;
+    height: 255px;
     max-width: 640px;
   }
   .container .last-col section.recent-blog-posts article div {
     float: left;
   }
   .container .last-col section.recent-blog-posts article .article1 {
-    margin-top: 26px;
+    margin-top: 51px;
     margin-right: 30px;
     background-image: url("../img/blogposts1.png");
     background-size: cover;
@@ -1459,7 +1648,7 @@ aside {
     width: 202px;
   }
   .container .last-col section.recent-blog-posts article .article2 {
-    margin-top: 26px;
+    margin-top: 51px;
     margin-right: 30px;
     background-image: url("../img/blogposts2.png");
     background-size: cover;
@@ -1467,7 +1656,7 @@ aside {
     width: 202px;
   }
   .container .last-col section.recent-blog-posts article .article3 {
-    margin-top: 26px;
+    margin-top: 51px;
     margin-right: 30px;
     background-image: url("../img/blogposts1.png");
     background-size: cover;
@@ -1475,34 +1664,44 @@ aside {
     width: 202px;
   }
   .container .last-col section.recent-blog-posts article .article4 {
-    margin-top: 26px;
+    margin-top: 51px;
     margin-right: 30px;
     background-image: url("../img/blogposts2.png");
     background-size: cover;
     height: 153px;
     width: 202px;
   }
+  .container .last-col section.recent-blog-posts article .cat-heading {
+    margin-top: 51px;
+    font-size: 9px;
+    display: block;
+    color: #da4f1f;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
   .container .last-col section.recent-blog-posts article h3 {
-    margin-top: 30px;
     font-size: 22px;
     line-height: 26px;
     text-align: left;
-    padding-bottom: 20px;
+    width: calc(100% - 40px);
   }
   .container .last-col section.recent-blog-posts article p {
+    padding-top: 13px;
     font-family: "Open Sans";
     text-align: left;
     color: #9f9f9f;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 18px;
+    width: calc(100% - 40px);
   }
   .container .last-col section.recent-blog-posts article .read-more-link {
-    margin-top: 22px;
     font-family: "Open Sans";
     font-size: 10px;
     letter-spacing: 2px;
     color: #000;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 30px;
+    width: calc(100% - 40px);
   }
   .container .last-col section.recent-blog-posts article:last-child {
     border-bottom: 1px solid #e7e7e7;
@@ -1515,21 +1714,20 @@ aside {
     border: 1px solid #e7e7e7;
     border-bottom: none;
     border-left: none;
-    border-bottom: nonee;
-    margin-top: 75px;
+    border-bottom: none;
+    margin-top: 91px;
     width: 20.625%;
     max-width: 198px;
     padding-left: 60px;
     padding-right: 60px;
-    height: 203px;
+    height: 211px;
   }
   .container .last-col section.stay-in-touch span {
     color: #da4f1f;
     font-size: 10px;
     letter-spacing: 2px;
-    font-weight: 800;
+    font-weight: 700;
     display: block;
-    padding-bottom: 20px;
   }
   .container .last-col section.stay-in-touch input[type=text],
   .container .last-col section.stay-in-touch input[type=email] {
@@ -1552,7 +1750,7 @@ aside {
     letter-spacing: 1.2px;
     font-size: 9.84px;
     font-family: "Open Sans";
-    font-weight: 800;
+    font-weight: 700;
   }
   .container .last-col section.social-media {
     border: 1px solid #e7e7e7;
@@ -1562,14 +1760,14 @@ aside {
     float: left;
     width: calc(34% - 47px);
     max-width: 318px;
-    height: 696px;
+    height: 720px;
   }
   .container .last-col section.social-media h3 {
     margin-top: 37px;
     color: #da4f1f;
     font-size: 10px;
     letter-spacing: 2px;
-    font-weight: 800;
+    font-weight: 700;
     text-align: left;
     padding-bottom: 34px;
   }
@@ -1643,7 +1841,7 @@ aside {
     color: #c0c0c0;
   }
   .container footer table th {
-    font-weight: 800;
+    font-weight: 700;
     color: #494949;
     text-align: left;
     padding-bottom: 25px;

@@ -15,10 +15,10 @@
 				
 				.desktop-nav
 					margin:0 auto
-					width:calc(100% - 10px)
-					max-width:950px
+					width:100%
+					max-width:960px
 					display:block
-					padding-top:32px
+					padding-top:22px
 					padding-left:10px
 					color:white 
 					
@@ -36,7 +36,7 @@
 						.col-i
 							
 							padding-top:30px
-							width:calc(42.8% - 10px)
+							width:42.8%
 							max-width:411px
 							.menu-text
 								padding-left:10px
@@ -49,8 +49,7 @@
 							max-width:138px
 						.col-iii
 							padding-top:30px
-							width:calc(41.667% - 10px)
-							max-width:400px
+							width:42.667%
 							text-align:right
 							
 							#searchbox
@@ -84,15 +83,14 @@
 							float:left
 							width:57.2%
 							max-width:549px
-							padding-top:10px					
+							padding-top:5px					
 							padding-bottom:10px
 
 						.slogan
 							float:left
-							padding-top:10px
+							padding-top:5px
 							text-align:right
-							max-width:400px
-							width:41.667%
+							width:42.667%
 
 					.review-menu
 						clear:both
@@ -101,7 +99,7 @@
 						text-align:center
 						padding-top:16px
 						padding-bottom:15px
-
+						position:relative
 						ul 
 							li 
 								font-family:helvetica
@@ -113,6 +111,24 @@
 								display:inline-block
 								padding-right:30px
 								cursor:pointer
+								
+								ul
+									display:none
+									background-color:#fff
+									position:absolute
+									text-align:left
+									padding-top:35px
+									padding-left:33px
+									padding-bottom:39px
+									width:165px
+									top:52px
+									box-shadow:0px 16px 16px rgba(0,0,0,0.26)
+								    
+									li 
+										display:block
+										color:#878787
+										margin-bottom:8px
+
 							li:last-child
 								padding-right:0	
 
@@ -126,11 +142,12 @@
 					
 					p 
 						@extend .futura
-						font-size:11px
+						font-size:13px
 						letter-spacing:1.5px
 						padding-bottom:12px
-						font-weight:800
+						font-weight:900
 						padding-left:10px
+						padding-top:24px
 					
 					.category 
 						display:none
@@ -174,8 +191,10 @@
 				
 				p.category
 					@extend .futura
+					font-weight:700
 					font-size:11px
-					padding-top:128px
+					padding-top:142px
+				    color:#da4f1f
 				
 				h2.title
 					font-family:Georgia
@@ -191,7 +210,7 @@
 				.read-more-trending
 					font-family:'Open Sans'
 					font-size:10px
-					font-weight:800
+					font-weight:700
 					letter-spacing:2.0px
 			
 			article:nth-child(2)
@@ -247,7 +266,7 @@
 
 		section.recent-reviews
 			clear:both
-			width:100%
+			width:calc(100% - 40px)
 			max-width:960px
 			margin:0 auto
 
@@ -292,18 +311,18 @@
 						font-family:"Open Sans"
 						color:#9f9f9f
 						padding-top:10px
-						font-size:14.5px
-						line-height:16px
+						font-size:13.5px
+						line-height:18px
 						text-align:left
 						
 					.read-more-link
-						margin-top:22px
+						margin-top:9px
 						font-family:"Open Sans"
-						font-size:10px
+						font-size:9.5px
 						line-height:7px
 						letter-spacing:2.0px
 						color:black
-						font-weight:800
+						font-weight:700
 						
 				.cat-heading
 					padding-top:52px
@@ -311,6 +330,7 @@
 					font-size:10px
 					display:block
 					font-weight:600
+					color:#da4f1f
 					padding-bottom:15px
 
 				span 
@@ -347,28 +367,29 @@
 				clear:both
 				width:66.3%
 				float:left
-				padding-top:30px
-				
+				padding-top:60px
 
 				h2
 					text-align:left
-					padding-bottom:34px
 					@extend .futura
 					font-size:11px
 					font-weight:600
+					position:relative
+					top:0px
+					margin-bottom:20px
 					
 				article 
 					border:1px solid #e7e7e7
 					border-bottom:none
 					padding-left:30px
-					height:247px
+					height:255px
 					max-width:640px
 
 					div 
 						float:left
 
 					.article1
-						margin-top:26px
+						margin-top:51px
 						margin-right:30px
 						background-image:url('../img/blogposts1.png')
 						background-size:cover
@@ -376,7 +397,7 @@
 						width:202px
 						
 					.article2
-						margin-top:26px
+						margin-top:51px
 						margin-right:30px
 						background-image:url('../img/blogposts2.png')
 						background-size:cover
@@ -384,7 +405,7 @@
 						width:202px
 						
 					.article3
-						margin-top:26px
+						margin-top:51px
 						margin-right:30px
 						background-image:url('../img/blogposts1.png')
 						background-size:cover
@@ -393,34 +414,47 @@
 						
 						
 					.article4
-						margin-top:26px
+						margin-top:51px
 						margin-right:30px
 						background-image:url('../img/blogposts2.png')
 						background-size:cover
 						height:153px
 						width:202px
-						
+					
+					.cat-heading 
+						margin-top:51px
+						@extend .futura
+						font-size:9px
+						display:block
+						color:#da4f1f
+						font-weight:600
+						margin-bottom:15px
+
 					h3
-						margin-top:30px
+
 						font-size:22px
 						line-height:26px
 						text-align:left
-						padding-bottom:20px
+						width:calc(100% - 40px)
 						
 					p 
+						padding-top:13px
 						font-family:"Open Sans"
 						text-align:left
 						color:#9f9f9f
-						font-size:16px
+						font-size:14px
+						line-height:18px
+						width:calc(100% - 40px)
 						
 					.read-more-link
-						margin-top:22px
 						font-family:"Open Sans"
 						font-size:10px
 						letter-spacing:2.0px
 						color:black
-						font-weight:800
+						font-weight:700
 						margin-bottom:30px
+						width:calc(100% - 40px)
+
 				article:last-child
 					border-bottom:1px solid #e7e7e7
 
@@ -432,22 +466,21 @@
 				border:1px solid #e7e7e7
 				border-bottom:none
 				border-left:none
-				border-bottom:nonee
-				margin-top:75px
+				border-bottom:none
+				margin-top:91px
 				width:20.625%
 				max-width:198px
 				padding-left:60px
 				padding-right:60px
-				height:203px
+				height:211px
 				
 				span 
 					color:#da4f1f
 					@extend .futura
 					font-size:10px
 					letter-spacing:2px
-					font-weight:800
+					font-weight:700
 					display:block
-					padding-bottom:20px
 					
 
 				input[type=text], input[type=email]
@@ -470,7 +503,7 @@
 					letter-spacing:1.2px
 					font-size:9.84px
 					font-family:"Open Sans"
-					font-weight:800
+					font-weight:700
 					
 					
 			section.social-media 
@@ -481,7 +514,7 @@
 				float:left
 				width:calc(34% - 47px)
 				max-width:318px
-				height:696px
+				height:720px
 
 				h3 
 					margin-top:37px
@@ -489,7 +522,7 @@
 					@extend .futura
 					font-size:10px
 					letter-spacing:2px
-					font-weight:800
+					font-weight:700
 					text-align:left
 					padding-bottom:34px
 				
@@ -561,7 +594,7 @@
 				font-size:13px
 				color:#c0c0c0
 				th 
-					font-weight:800
+					font-weight:700
 					color:#494949
 					text-align:left
 					padding-bottom:25px

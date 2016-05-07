@@ -22,7 +22,11 @@
 					@extend .futura
 					font-size:11px
 					letter-spacing:1.5px
+					margin-top:30px
+					padding-left:0px
 					padding-bottom:12px
+					font-weight:900
+					
 				
 				h1
 					font-size:116px
@@ -34,12 +38,13 @@
 				
 
 	section.trending-posts
-		padding-left:13px
+		padding-left:17px
 		padding-right:13px
 		
 		h2
 			padding-top:38px
 			text-align:center
+			font-weight:800
 			padding-bottom:34px
 			@extend .futura
 			font-size:11px
@@ -61,13 +66,16 @@
 				padding-top:128px
 			
 			h2.title
-				font-family:'Palatino'
+				font-family:Georgia
+				font-style:italic
+				font-weight:500
+				letter-spacing:1px
 				padding-top:13px
 				text-align:left
 				color:white
 				font-size:25px
 				line-height:29px
-				max-width:210px
+				width:calc(100% - 40px)
 				
 			.read-more-trending
 				font-family:'Open Sans'
@@ -81,6 +89,9 @@
 		article:nth-child(4)
 			width:calc(100% - 24px)
 			margin-right:0px
+			
+			h2.title
+				width:35%
 		
 		article:nth-child(5)
 			margin-right:20px
@@ -130,6 +141,7 @@
 			padding-top:38px
 			text-align:center
 			padding-bottom:34px
+			font-weight:800
 			@extend .futura
 			font-size:11px
 
@@ -138,7 +150,7 @@
 			padding-left:33px
 			padding-right:19px
 			padding-top:37px
-			padding-bottom:39px
+			padding-bottom:19px
 			width:calc(50% - 53px)
 			float:left
 			height:235px
@@ -148,12 +160,13 @@
 				padding-top:33px
 				h3
 					clear:both
-					padding-top:0px
+					padding-top:10px
 					font-family: "Georgia"
 					font-style:italic
 					font-size:20px
-					line-height:28px
+					line-height:23px
 					text-align:center
+					max-width:calc(100% - 30px)
 					padding-bottom:18px
 					text-decoration:none
 					color:#2f2f2f
@@ -162,6 +175,7 @@
 					font-family:"Open Sans"
 					color:#9f9f9f
 					font-size:16px
+					line-height:21px
 					text-align:center
 					
 				.read-more-link
@@ -186,7 +200,7 @@
 				
 			.tiny-logo
 				position:absolute
-				top:26px
+				top:20px
 				right:37px
 				
 		.recent-main:nth-child(odd){
@@ -202,6 +216,7 @@
 			padding-bottom:21px
 			@extend .futura
 			font-size:11px
+			font-weight:800
 			border-bottom:1px solid #e6e6e6
 
 		article 
@@ -209,11 +224,13 @@
 			padding-left:40px
 			padding-right:53px
 			border-bottom:1px solid #e6e6e6
+			min-height:176px
 			.article1
 				margin-right:44px
 				background-image:url('../img/article-b1-t.png')
 				background-repeat:no-repeat
-				height:147px
+				background-size:cover
+				height:135px
 				width:40.5%
 				max-width:203px
 				float:left
@@ -222,7 +239,8 @@
 				margin-right:44px
 				background-image:url('../img/article-b2-t.png')
 				background-repeat:no-repeat
-				height:147px
+				background-size:cover
+				height:135px
 				width:40.5%
 				max-width:203px
 				float:left
@@ -231,7 +249,8 @@
 				margin-right:44px
 				background-image:url('../img/article-b1-t.png')
 				background-repeat:no-repeat
-				height:147px
+				background-size:cover
+				height:135px
 				width:40.5%
 				max-width:203px
 				float:left
@@ -240,16 +259,27 @@
 				margin-right:44px
 				background-image:url('../img/article-b2-t.png')
 				background-repeat:no-repeat
-				height:147px
+				background-size:cover
+				height:135px
 				width:40.5%
 				max-width:203px
 				float:left
 				
+
+			.cat-heading 
+				margin-top:41px
+				@extend .futura
+				font-size:9px
+				display:block
+				color:#da4f1f
+				font-weight:600
+				margin-bottom:15px
+				
 			h3
-				margin-top:46px
 				font-size:20.31px
 				line-height:23.46px
 				text-align:left
+				width:calc(100% - 40px)
 				padding-bottom:10px
 				font-family:"Georgia"
 				font-style:italic
@@ -257,17 +287,18 @@
 				font-family:"Open Sans"
 				text-align:left
 				color:#9f9f9f
-				font-size:12.5px
-				line-height:17.58px
+				width:calc(100% - 60px)
+				font-size:14.5px
+				line-height:18.58px
 
 			.read-more-link
-				margin-top:22px
+				margin-top:10px
 				font-family:"Open Sans"
 				font-size:10px
 				letter-spacing:2.0px
 				color:black
 				font-weight:800
-				margin-bottom:64px
+				margin-bottom:32px
 	
 	section.stay-in-touch
 		padding-top:44px
@@ -306,6 +337,7 @@
 			font-weight:800
 			font-size:9.84px
 			letter-spacing:2px
+			margin-top:15px
 
 	section.social-media 
 
